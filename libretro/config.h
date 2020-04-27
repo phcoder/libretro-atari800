@@ -541,7 +541,9 @@
   #define WORDS_BIGENDIAN 1
 #endif
 /* Define if unaligned word access is ok. */
+#if defined(__i386__) || defined(__x86_64__) || defined(__m68k__)
 #define WORDS_UNALIGNED_OK 1
+#endif
 
 /* Target: Standard X11. */
 /* #undef X11 */
